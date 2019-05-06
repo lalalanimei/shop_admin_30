@@ -6,16 +6,19 @@ import Home from '@/components/Home'
 Vue.use(Router)
 
 const router = new Router({
-  routes: [{
-    path: '/',
-    redirect: '/login'
-  }, {
-    path: '/login',
-    component: Login
-  }, {
-    path: '/home',
-    component: Home
-  }]
+  routes: [
+
+    {
+      path: '/',
+      redirect: '/login'
+    }, {
+      path: '/login',
+      component: Login
+    }, {
+      path: '/home',
+      component: Home
+    }
+  ]
 })
 router.beforeEach((to, from, next) => {
   if (to.path === '/login') {
